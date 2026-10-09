@@ -13,7 +13,7 @@ TAXONOMY = os.path.join(ROOT, "Hereknows App", "skills.json")
 COLLAGE = os.path.join(ROOT, "Hereknows App", "Media", "welcome-collage.jpg")
 
 HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DATA = os.path.join(HERE, "v2", "data")
+DATA = os.path.join(HERE, "assets", "data")
 IMG = os.path.join(HERE, "assets", "img", "v2")
 for d in (DATA, IMG):
     os.makedirs(d, exist_ok=True)

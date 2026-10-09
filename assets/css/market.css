@@ -239,6 +239,8 @@ p { margin: 0; }
 .foot__legal { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-top: 20px; color: rgba(255, 255, 255, 0.55); font-size: 0.8125rem; }
 .foot__legal a { color: rgba(255, 255, 255, 0.7); }
 
+.og .top, .og .strip { display: none; }
+
 /* ---------- Reveal ---------- */
 .js .reveal { opacity: 0; transform: translateY(14px); transition: opacity 0.6s ease, transform 0.6s ease; }
 .js .reveal.is-in { opacity: 1; transform: none; }

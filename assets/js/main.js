@@ -247,7 +247,7 @@ function init3D(canvas) {
   const textures = {};
   const tex = (name) => {
     if (!textures[name]) {
-      const t = loader.load(`assets/img/screens/${name}.webp`);
+      const t = loader.load(`/assets/img/screens/${name}.webp`);
       t.colorSpace = THREE.SRGBColorSpace;
       t.anisotropy = Math.min(8, renderer.capabilities.getMaxAnisotropy());
       textures[name] = t;

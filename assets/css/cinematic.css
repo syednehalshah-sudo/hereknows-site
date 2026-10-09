@@ -243,6 +243,7 @@ h1 em { font-style: normal; color: var(--lime); white-space: nowrap; }
   max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); color: var(--ink-3); font-size: 0.875rem;
 }
 .footer__inner p { margin: 0; }
+.footer__inner a { color: var(--ink-2); }
 .footer img { height: 24px; width: auto; }
 
 /* ---------- Fallbacks ---------- */

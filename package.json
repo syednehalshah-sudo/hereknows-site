@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "esbuild assets/js/main.js --bundle --minify --format=esm --target=es2020 --outfile=assets/js/site.js --legal-comments=none",
+    "build": "esbuild assets/js/main.js --bundle --minify --format=esm --target=es2020 --outfile=assets/js/cinematic.js --legal-comments=none",
     "serve": "node scripts/serve.mjs",
     "shots": "node scripts/shots.mjs",
     "assets": "python scripts/prep-assets.py"

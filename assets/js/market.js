@@ -1,6 +1,7 @@
 /* Marketplace version: search, categories, tabs, cost estimate. No dependencies. */
 const doc = document.documentElement;
 doc.classList.add('js');
+if (new URLSearchParams(location.search).has('og')) doc.classList.add('og');
 const $ = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
 const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -89,7 +90,7 @@ const catsEl = $('#cats');
 const panel = $('#panel');
 const allBtn = $('#cats-all');
 
-fetch('data/skills.json')
+fetch('/assets/data/skills.json')
   .then((r) => r.json())
   .then((d) => {
     data = d;

@@ -4,279 +4,347 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Hereknows | If you know it, sell it.</title>
-  <meta name="description" content="Hereknows is a live-video marketplace where anyone can teach what they know, and anyone can learn it or get it fixed, paying only for the minutes they use." />
+  <meta name="description" content="Hereknows is a live-video marketplace. Book a call with a real person for any skill, by the minute, or sell what you know." />
   <link rel="canonical" href="https://hereknows.com/" />
-  <meta name="theme-color" content="#0A3B2C" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Hereknows" />
-  <meta property="og:title" content="Hereknows: if you know it, sell it." />
-  <meta property="og:description" content="Teach what you know over a live video call. Learn anything, or get it fixed, by the minute." />
+  <meta property="og:title" content="Hereknows: learn it live, from someone who knows" />
+  <meta property="og:description" content="Book a video call with a real person for any skill, by the minute. Or sell what you know." />
   <meta property="og:url" content="https://hereknows.com/" />
   <meta property="og:image" content="https://hereknows.com/assets/img/og.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
-  <link rel="icon" href="assets/img/favicon.ico" sizes="48x48" />
-  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
-  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="icon" href="/assets/img/favicon.ico" sizes="48x48" />
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;500;600&display=swap" />
-  <link rel="stylesheet" href="assets/css/site.css" />
-  <script>
-    document.documentElement.classList.add('js');
-    setTimeout(function () { document.documentElement.classList.remove('js'); }, 3000);
-  </script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" />
+  <link rel="stylesheet" href="/assets/css/market.css" />
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Hereknows",
-    "url": "https://hereknows.com/",
-    "logo": "https://hereknows.com/assets/img/logo-symbol-light.svg",
-    "slogan": "If you know it, sell it."
-  }
+  {"@context": "https://schema.org", "@type": "Organization", "name": "Hereknows", "url": "https://hereknows.com/", "logo": "https://hereknows.com/assets/img/logo-symbol-light.svg", "slogan": "If you know it, sell it."}
   </script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
-  <div class="bg" aria-hidden="true"></div>
-  <canvas id="gl" aria-hidden="true"></canvas>
-  <div id="labels" aria-hidden="true"></div>
 
-  <header class="nav">
-    <a class="nav__logo" href="#hero" aria-label="Hereknows home">
-      <img src="assets/img/logo-horizontal-reversed.svg" alt="Hereknows" width="141" height="30" />
-    </a>
-    <nav aria-label="Sections">
-      <ul class="nav__links">
-        <li><a href="#how">How it works</a></li>
-        <li><a href="#urgent">Urgent help</a></li>
-        <li><a href="#sell">For sellers</a></li>
-        <li><a href="#trust">Trust</a></li>
-      </ul>
-    </nav>
-    <a class="pill" href="#download"><span class="pill__dot" aria-hidden="true"></span>Coming soon</a>
+  <header class="top">
+    <div class="top__inner">
+      <a class="top__logo" href="/" aria-label="Hereknows home">
+        <img src="/assets/img/logo-horizontal-primary.svg" alt="Hereknows" width="141" height="30" />
+      </a>
+      <nav class="top__nav" id="topnav" aria-label="Main">
+        <a href="#categories">Find a helper</a>
+        <a href="#teach">Sell a skill</a>
+        <a href="#urgent">Urgent help</a>
+        <a href="#how">How it works</a>
+        <a href="#trust">Trust</a>
+        <a class="top__nav-mobile" href="#access">Get early access</a>
+      </nav>
+      <div class="top__cta">
+        <a class="top__login" href="#access">Log in</a>
+        <a class="btn btn--primary btn--sm" href="#access">Get early access</a>
+      </div>
+      <button class="top__menu" type="button" aria-expanded="false" aria-controls="topnav" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+      </button>
+    </div>
   </header>
+
+  <div class="strip">
+    <div class="strip__inner">
+      <p>Hereknows is in private testing. The first release on iPhone and Android is on its way.</p>
+      <a href="#how">See how it works <span aria-hidden="true">&rarr;</span></a>
+    </div>
+  </div>
 
   <main id="main">
 
-    <section id="hero" class="scene scene--hero" data-shot="hero">
-      <div class="scene__inner">
-        <div class="hero__copy" data-reveal data-reveal-children>
-          <p class="eyebrow">Live-video skill marketplace</p>
-          <h1>If you know it, <em>sell it.</em></h1>
-          <p class="lede">Hereknows is where anyone can teach what they know over a live video call, and anyone can learn it, or get it fixed, paying only for the minutes they use.</p>
-          <div class="actions">
-            <a class="btn btn--primary" href="#how">See how it works</a>
-            <a class="btn btn--ghost" href="#film">Watch the film</a>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__card">
+        <img class="hero__photo" src="/assets/img/v2/hero-collage.webp" alt="" width="1400" height="788" />
+        <div class="hero__copy">
+          <h1 id="hero-title" data-copy="title">Learn it live, from someone who knows.</h1>
+          <p class="hero__lede" data-copy="lede">Book a video call with a real person, by the minute, for anything from guitar to a washing machine that will not drain.</p>
+          <div class="toggle" role="tablist" aria-label="I want to">
+            <button type="button" role="tab" aria-selected="true" data-mode="learn">I want to learn</button>
+            <button type="button" role="tab" aria-selected="false" data-mode="teach">I want to teach</button>
           </div>
-        </div>
-      </div>
-      <div class="cue" aria-hidden="true">Scroll<i></i></div>
-    </section>
-
-    <section id="anything" class="scene scene--anything" data-shot="anything">
-      <div class="scene__inner">
-        <div class="scene__copy" data-reveal data-reveal-children>
-          <p class="eyebrow">Anyone. Anything.</p>
-          <h2 class="h2">Everyone knows something somebody will pay to learn.</h2>
-          <p class="lede">Guitar at nine, spreadsheets at ten, Arabic over lunch, a washing machine that will not drain at six. Hereknows lists 795 skills in 30 categories, from cooking to code, and if yours is missing you add it in a tap.</p>
-          <dl class="facts">
-            <div class="fact"><dt>795</dt><dd>skills</dd></div>
-            <div class="fact"><dt>30</dt><dd>categories</dd></div>
-            <div class="fact"><dt>183</dt><dd>languages</dd></div>
-          </dl>
+          <form class="search" role="search" autocomplete="off">
+            <label class="sr-only" for="q">Search skills</label>
+            <div class="search__box">
+              <input id="q" type="search" name="q" placeholder="What do you need help with?" role="combobox" aria-autocomplete="list" aria-controls="results" aria-expanded="false" />
+              <button type="submit" class="search__btn">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="m20 20-3.5-3.5" /></svg>
+                <span>Search</span>
+              </button>
+            </div>
+            <ul id="results" class="search__results" role="listbox" hidden></ul>
+          </form>
+          <ul class="chips" data-copy="chips"></ul>
         </div>
       </div>
     </section>
 
-    <section id="how" class="scene scene--phone" data-shot="how">
-      <div class="scene__col">
-        <div class="scene__head" data-reveal data-reveal-children>
-          <p class="eyebrow">How it works</p>
-          <h2 class="h2">A teacher in every pocket.</h2>
-        </div>
-        <article class="step" data-screen="browse-people">
-          <div class="step__body">
-            <span class="step__n">01</span>
-            <h3>Find someone who knows</h3>
-            <p>Search a skill or describe the problem. See who teaches it, where they are, which languages they speak and whether they are online right now.</p>
-          </div>
-        </article>
-        <article class="step" data-screen="call">
-          <div class="step__body">
-            <span class="step__n">02</span>
-            <h3>Talk live, on video</h3>
-            <p>Book a time or start straight away. The call runs inside the app, camera on or voice only, and no phone numbers change hands.</p>
-          </div>
-        </article>
-        <article class="step" data-screen="call-ended">
-          <div class="step__body">
-            <span class="step__n">03</span>
-            <h3>Pay for the minutes you used</h3>
-            <p>The amount is held when you book and settled when the call ends. Finished early? You pay for the time used, down to the helper's minimum.</p>
-          </div>
-        </article>
-      </div>
-      <img class="gl-fallback" src="assets/img/screens/browse-people.webp" alt="The Hereknows search screen listing a person who teaches small appliance repair, with Profile, Message and Request buttons." width="828" height="1844" loading="lazy" />
+    <section class="facts" aria-label="Hereknows in numbers">
+      <p class="facts__label">Built for everyone, everywhere</p>
+      <ul class="facts__list">
+        <li><b>795</b><span>skills to learn or teach</span></li>
+        <li><b>30</b><span>categories, from cooking to code</span></li>
+        <li><b>183</b><span>languages to search by</span></li>
+        <li><b>100%</b><span>of accounts ID-checked</span></li>
+      </ul>
     </section>
 
-    <section id="urgent" class="scene scene--phone" data-shot="urgent">
-      <div class="scene__col">
-        <div class="scene__head" data-reveal data-reveal-children>
-          <p class="eyebrow">Urgent help</p>
-          <h2 class="h2">Stuck right now? Ask.</h2>
-        </div>
-        <article class="step" data-screen="urgent-form">
-          <div class="step__body">
-            <span class="step__n">01</span>
-            <h3>Say what is wrong</h3>
-            <p>Type the problem, pick video or voice, set a budget per hour, and choose who should hear it: a country, a language, licensed professionals only.</p>
-          </div>
-        </article>
-        <article class="step" data-screen="ask-waiting">
-          <div class="step__body">
-            <span class="step__n">02</span>
-            <h3>The people who know get a ping</h3>
-            <p>Helpers who teach that skill are notified at once. The first to say yes ends the wait.</p>
-          </div>
-        </article>
-        <article class="step" data-screen="ask-shortlist">
-          <div class="step__body">
-            <span class="step__n">03</span>
-            <h3>Pick from the best five</h3>
-            <p>You see up to five helpers, ranked by skill, how close they are, their rating and the languages you share. Choose one and the call starts.</p>
-          </div>
-        </article>
-        <article class="step" data-screen="call-ended">
-          <div class="step__body">
-            <span class="step__n">04</span>
-            <h3>Not solved? Send it again</h3>
-            <p>One tap sends the same request back out to new helpers. The one you just spoke to is left off the list.</p>
-          </div>
-        </article>
+    <section id="categories" class="section">
+      <div class="section__head">
+        <h2>Find help for every kind of skill</h2>
+        <button type="button" class="link-btn" id="cats-all" aria-expanded="false">Show all 30 categories</button>
       </div>
-      <img class="gl-fallback" src="assets/img/screens/urgent-form.webp" alt="The Hereknows urgent request form with a skill picker, a problem description, a video or audio choice and a budget per hour." width="828" height="1844" loading="lazy" />
-    </section>
-
-    <section id="sell" class="scene scene--phone" data-shot="sell">
-      <div class="scene__col">
-        <div class="scene__head" data-reveal data-reveal-children>
-          <p class="eyebrow">For sellers</p>
-          <h2 class="h2">Set your rate. Keep your hours.</h2>
-        </div>
-        <article class="step" data-screen="new-listing">
-          <div class="step__body">
-            <span class="step__n">01</span>
-            <h3>List what you teach</h3>
-            <p>A title, what happens in a session, a price per hour, and the shortest and longest session you take. One-off, weekly or daily. Live in two minutes, with no approval queue.</p>
-          </div>
-        </article>
-        <article class="step" data-screen="seller">
-          <div class="step__body">
-            <span class="step__n">02</span>
-            <h3>Show who you are</h3>
-            <p>Your profile carries your ID ticks, your languages, the skills you can help with, an intro video and up to five photos of your work.</p>
-          </div>
-        </article>
-        <article class="step" data-screen="listing">
-          <div class="step__body">
-            <span class="step__n">03</span>
-            <h3>Get paid when the call ends</h3>
-            <p>The buyer's money is held when a session is booked and settled to you when it ends. Take urgent calls as well, or switch them off.</p>
-          </div>
-        </article>
+      <div class="cats" id="cats" aria-live="polite">
+        <noscript><p>Turn on JavaScript to browse the categories. The app lists 795 skills across 30 categories.</p></noscript>
       </div>
-      <img class="gl-fallback" src="assets/img/screens/new-listing.webp" alt="The Hereknows new listing form with a skill, a title, a session type and an hourly rate." width="828" height="1844" loading="lazy" />
-    </section>
-
-    <section id="people" class="band band--mint" data-shot="people">
-      <div class="band__inner">
-        <div data-reveal data-reveal-children>
-          <p class="eyebrow eyebrow--dark">Who sells</p>
-          <h2 class="h2">A baker, a guitarist, the one who fixes washing machines.</h2>
-          <p class="lede lede--dark">Most skills never reach a classroom. Someone learnt them the hard way and would gladly show you for half an hour. Hereknows gives that person a way to be found, and a way to be paid.</p>
-        </div>
-        <img src="assets/img/collage.webp" srcset="assets/img/collage-sm.webp 820w, assets/img/collage.webp 1400w" sizes="(max-width: 860px) 100vw, 58vw" alt="Five people teaching over video: a baker, an appliance technician holding a phone, a guitarist, a language teacher at a laptop and an oud player." width="1400" height="788" loading="lazy" data-reveal />
-      </div>
-    </section>
-
-    <section id="film" class="film" data-shot="film">
-      <div class="film__inner">
-        <div class="film__copy" data-reveal data-reveal-children>
-          <p class="eyebrow">The film</p>
-          <h2 class="h2">Twenty-five seconds, start to finish.</h2>
-          <p class="lede">From a typed request to a helper on the line and a settled bill.</p>
-        </div>
-        <div class="film__frame" data-reveal>
-          <video preload="none" playsinline controls poster="assets/img/film-poster.webp" width="1280" height="720">
-            <source src="assets/video/hereknows-film.mp4" type="video/mp4" />
-          </video>
-          <button class="film__play" type="button" aria-label="Play the Hereknows film">
-            <span><svg viewBox="0 0 24 24" width="34" height="34" aria-hidden="true"><path d="M8 5v14l11-7-11-7Z" fill="currentColor" /></svg></span>
+      <div class="panel" id="panel" hidden>
+        <div class="panel__head">
+          <h3 id="panel-title"></h3>
+          <button type="button" class="panel__close" id="panel-close" aria-label="Close">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" /></svg>
           </button>
         </div>
+        <p class="panel__note" id="panel-note"></p>
+        <ul class="panel__skills" id="panel-skills"></ul>
       </div>
     </section>
 
-    <section id="trust" class="scene scene--trust" data-shot="trust">
-      <div class="scene__inner">
-        <div class="scene__copy" data-reveal data-reveal-children>
-          <p class="eyebrow">Trust</p>
-          <h2 class="h2">Built so strangers can trust each other.</h2>
+    <section id="how" class="section">
+      <div class="section__head">
+        <h2>How it works</h2>
+        <div class="tabs" role="tablist" aria-label="How it works">
+          <button type="button" role="tab" id="tab-learn" aria-selected="true" aria-controls="how-learn">For learning</button>
+          <button type="button" role="tab" id="tab-teach" aria-selected="false" aria-controls="how-teach">For teaching</button>
         </div>
-        <ul class="cards" data-reveal data-reveal-children>
-          <li class="card">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3Z" /><path d="m9 12 2 2 4-4" /></svg>
-            <h3>Everyone is ID-checked</h3>
-            <p>Phone, email, a live selfie and a government ID before anyone can book, sell or take an urgent call. Only the result is kept.</p>
+      </div>
+
+      <div class="how" id="how-learn" role="tabpanel" aria-labelledby="tab-learn">
+        <div class="how__media">
+          <img class="how__photo" src="/assets/img/v2/photo-tech.webp" alt="An appliance technician on a video call, holding up a phone that shows the inside of a washing machine." width="900" height="377" loading="lazy" />
+          <img class="how__phone" src="/assets/img/screens/browse-people.webp" alt="The Hereknows search screen showing a person who teaches small appliance repair." width="828" height="1844" loading="lazy" />
+        </div>
+        <ol class="steps">
+          <li>
+            <h3>Search or ask</h3>
+            <p>Type a skill or describe the problem. See who teaches it, where they are, the languages they speak and whether they are online now.</p>
+            <a href="#categories">Browse categories</a>
           </li>
-          <li class="card">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="13" height="12" rx="2" /><path d="m16 10 5-3v10l-5-3" /></svg>
-            <h3>Every call is recorded</h3>
-            <p>Recordings are kept for 30 days for safety and disputes, then deleted.</p>
+          <li>
+            <h3>Talk live on video</h3>
+            <p>Book a time or start straight away. The call runs inside the app, camera on or voice only, and no phone numbers change hands.</p>
+            <a href="#urgent">Get help right now</a>
           </li>
-          <li class="card">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2" /><path d="M3 10h18M8 3v4M16 3v4" /></svg>
-            <h3>Five days to raise a dispute</h3>
-            <p>Not what was promised? Tell us within five days and we check the recording.</p>
+          <li>
+            <h3>Pay for the minutes you used</h3>
+            <p>The amount is held when you book and settled when the call ends. Finished early? You pay for the time used, down to the helper's minimum.</p>
+            <a href="#cost">See what it costs</a>
           </li>
-          <li class="card">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="5" /><path d="m8.5 13.5-1.5 7 5-3 5 3-1.5-7" /></svg>
-            <h3>Licensed means checked</h3>
-            <p>Skills that need a licence, from counselling to electrical work, show a verified badge once we have seen the document.</p>
+        </ol>
+      </div>
+
+      <div class="how" id="how-teach" role="tabpanel" aria-labelledby="tab-teach" hidden>
+        <div class="how__media">
+          <img class="how__photo" src="/assets/img/v2/photo-baker.webp" alt="A baker stretching dough in her kitchen during a video lesson." width="466" height="657" loading="lazy" />
+          <img class="how__phone" src="/assets/img/screens/new-listing.webp" alt="The Hereknows new listing form with a title, a session type and an hourly rate." width="828" height="1844" loading="lazy" />
+        </div>
+        <ol class="steps">
+          <li>
+            <h3>List what you teach</h3>
+            <p>A title, what happens in a session, a price per hour and the shortest and longest session you take. Live in two minutes, with no approval queue.</p>
+            <a href="#teach">What sellers get</a>
           </li>
-        </ul>
-        <p class="note" data-reveal>Hereknows is for adults. Every account is checked to be 18 or over.</p>
+          <li>
+            <h3>Get booked, or get a ping</h3>
+            <p>Learners book your listing at a time you offer. Switch on urgent calls and you are notified the moment someone nearby needs your skill.</p>
+            <a href="#urgent">How urgent asks work</a>
+          </li>
+          <li>
+            <h3>Get paid when the call ends</h3>
+            <p>The learner's money is held when a session is booked and settled to you when it ends, for the minutes used.</p>
+            <a href="#cost">See the maths</a>
+          </li>
+        </ol>
       </div>
     </section>
 
-    <section id="download" class="scene scene--end" data-shot="download">
-      <div class="scene__inner">
-        <div class="scene__copy scene__copy--center" data-reveal data-reveal-children>
-          <p class="eyebrow">Coming soon</p>
-          <h2 class="h2">Coming soon to iPhone and Android.</h2>
-          <p class="lede">Hereknows is in private testing with its first sellers. The app arrives on the App Store and Google Play soon.</p>
-          <div class="stores">
-            <div class="store"><b>App Store</b><span>Coming soon</span></div>
-            <div class="store"><b>Google Play</b><span>Coming soon</span></div>
-          </div>
+    <section id="cost" class="section">
+      <div class="dark">
+        <div class="dark__copy">
+          <h2>Know the cost before you call</h2>
+          <p>Sellers set a price per hour. Booked sessions and urgent calls are both billed by the minute, so a short call costs a short call's worth. Try a rate and a length.</p>
+          <form class="calc" aria-label="Cost estimate">
+            <div class="calc__field">
+              <label for="rate">Seller's rate, $ per hour</label>
+              <input id="rate" type="number" inputmode="decimal" min="1" max="1000" step="1" value="20" />
+            </div>
+            <div class="calc__field">
+              <label for="mins">Minutes on the call</label>
+              <input id="mins" type="number" inputmode="numeric" min="1" max="1440" step="1" value="30" />
+            </div>
+            <output class="calc__out" for="rate mins" id="cost-out" aria-live="polite"></output>
+          </form>
+          <p class="dark__fine">Plus a small service fee, shown before you confirm. Finished in six minutes? You pay the seller's minimum, usually ten.</p>
+        </div>
+        <div class="dark__art" aria-hidden="true">
+          <svg viewBox="0 0 240 240" class="glow-ring">
+            <g fill="none" stroke="#C4F23F" stroke-width="3">
+              <circle cx="120" cy="48" r="17" /><circle cx="170.9" cy="69.1" r="17" /><circle cx="192" cy="120" r="17" /><circle cx="170.9" cy="170.9" r="17" />
+              <circle cx="120" cy="192" r="17" /><circle cx="69.1" cy="170.9" r="17" /><circle cx="48" cy="120" r="17" /><circle cx="69.1" cy="69.1" r="17" />
+              <circle cx="120" cy="120" r="32" /><circle cx="120" cy="120" r="19" />
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section id="urgent" class="section">
+      <div class="section__head section__head--center">
+        <h2>Choose how you want to get help</h2>
+        <p>Two ways in, one call out.</p>
+      </div>
+      <div class="plans">
+        <article class="plan">
+          <h3>Book a session</h3>
+          <p class="plan__for">For learning something properly, at a time that suits you</p>
+          <p class="plan__desc">Browse people and listings, read their profile, and book an hour, a weekly class or a one-off fix.</p>
+          <p class="plan__inc">What you get:</p>
+          <ul class="checks">
+            <li>People and priced listings across every category</li>
+            <li>Profiles with ID ticks, languages, reviews and an intro video</li>
+            <li>A time you choose, one-off or recurring</li>
+            <li>Money held when you book, settled when the call ends</li>
+            <li>Every call recorded for 30 days, with five days to dispute</li>
+          </ul>
+          <a class="btn btn--outline" href="#access">Get early access</a>
+        </article>
+        <article class="plan plan--hot">
+          <span class="plan__badge">Fastest</span>
+          <h3>Ask now</h3>
+          <p class="plan__for">For a problem you have right now</p>
+          <p class="plan__desc">Describe what is wrong, set a budget per hour, and the people who know it get a ping at once.</p>
+          <p class="plan__inc">How it runs:</p>
+          <ul class="checks">
+            <li>Helpers who teach that skill are notified immediately</li>
+            <li>The first to say yes ends the wait; you pick from the best five</li>
+            <li>Ranked by skill, closeness, rating and shared language</li>
+            <li>Video or voice, billed by the minute against your budget</li>
+            <li>Not solved? Send it again, with the last helper left out</li>
+          </ul>
+          <a class="btn btn--primary" href="#access">Get early access</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="trust" class="section trust">
+      <div class="section__head section__head--center">
+        <h2>Built so strangers can trust each other</h2>
+      </div>
+      <ul class="trust__cards">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3Z" /><path d="m9 12 2 2 4-4" /></svg>
+          <h3>Everyone is ID-checked</h3>
+          <p>Phone, email, a live selfie and a government ID before anyone can book, sell or take an urgent call. Only the result is kept.</p>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="13" height="12" rx="2" /><path d="m16 10 5-3v10l-5-3" /></svg>
+          <h3>Every call is recorded</h3>
+          <p>Recordings are kept for 30 days for safety and disputes, then deleted.</p>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2" /><path d="M3 10h18M8 3v4M16 3v4" /></svg>
+          <h3>Five days to raise a dispute</h3>
+          <p>Not what was promised? Tell us within five days and we check the recording.</p>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="5" /><path d="m8.5 13.5-1.5 7 5-3 5 3-1.5-7" /></svg>
+          <h3>Licensed means checked</h3>
+          <p>Skills that need a licence, from counselling to electrical work, show a verified badge once we have seen the document.</p>
+        </li>
+      </ul>
+      <p class="trust__note">Hereknows is for adults. Every account is checked to be 18 or over.</p>
+    </section>
+
+    <section id="teach" class="section">
+      <div class="teach">
+        <img class="teach__photo" src="/assets/img/v2/photo-oud.webp" alt="An oud player teaching from his living room over video." width="549" height="454" loading="lazy" />
+        <div class="teach__copy">
+          <p class="eyebrow">For sellers</p>
+          <h2>Sell what you know. Keep your hours.</h2>
+          <ul class="checks checks--lg">
+            <li><b>Set your rate.</b> A price per hour, and the shortest and longest session you take.</li>
+            <li><b>Go live at once.</b> Listings publish without an approval queue.</li>
+            <li><b>Take urgent calls, or not.</b> One switch decides whether you get pinged.</li>
+            <li><b>Get paid when the call ends.</b> Money is held at booking and settled to you after the session.</li>
+          </ul>
+          <a class="btn btn--primary" href="#access">Start selling</a>
+          <p class="teach__fine">Need a licence for your skill? Counselling, electrical work and 35 other areas get a verified badge once we have seen the document.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="access" class="section">
+      <div class="cta">
+        <h2>Find someone who knows. Or be the one who does.</h2>
+        <p>Hereknows is in private testing with its first sellers. Leave us your details and we will tell you the day it opens.</p>
+        <div class="cta__actions">
+          <a class="btn btn--dark" href="#top">Coming soon on iPhone and Android</a>
+          <a class="btn btn--ghost-dark" href="/cinematic/#film">Watch the film</a>
         </div>
       </div>
     </section>
 
   </main>
 
-  <footer class="footer">
-    <div class="footer__inner">
-      <img src="assets/img/logo-horizontal-reversed.svg" alt="Hereknows" width="113" height="24" />
-      <p>If you know it, sell it.</p>
-      <p>Calls are recorded. For adults 18 and over.</p>
-      <p>&copy; 2026 Hereknows</p>
+  <footer class="foot">
+    <div class="foot__inner">
+      <div class="foot__cols">
+        <div>
+          <h4>For learners</h4>
+          <a href="#categories">Find a helper</a>
+          <a href="#urgent">Urgent help</a>
+          <a href="#how">How it works</a>
+          <a href="#cost">What it costs</a>
+        </div>
+        <div>
+          <h4>For sellers</h4>
+          <a href="#teach">Sell a skill</a>
+          <a href="#trust">Licences</a>
+          <a href="#how">Getting paid</a>
+          <a href="#trust">Rules: 18+, ID-checked</a>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <a href="#how">About Hereknows</a>
+          <a href="#access">Early access</a>
+          <span>Contact: soon</span>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <span>Terms: soon</span>
+          <span>Privacy: soon</span>
+          <a href="#trust">Recording policy</a>
+        </div>
+      </div>
+      <div class="foot__row">
+        <p>Follow us: soon</p>
+        <p>Mobile app: iPhone and Android, coming soon</p>
+      </div>
+      <div class="foot__legal">
+        <p>&copy; 2026 Hereknows. Calls are recorded. For adults 18 and over.</p>
+        <a href="/cinematic/">Cinematic version</a>
+      </div>
     </div>
   </footer>
 
-  <script type="module" src="assets/js/site.js"></script>
+  <script type="module" src="/assets/js/market.js"></script>
 </body>
 </html>
