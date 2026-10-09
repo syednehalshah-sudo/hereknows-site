@@ -79,7 +79,7 @@ const views = [
   { name: 'desktop', width: 1440, height: 900, dpr: 1, mobile: false },
   { name: 'mobile', width: 390, height: 844, dpr: 2, mobile: true },
 ];
-const stops = [
+const stops = process.env.STOPS ? process.env.STOPS.split(',') : [
   'hero', 'anything', 'how', '#how .step:nth-of-type(2)', '#how .step:nth-of-type(3)',
   'urgent', '#urgent .step:nth-of-type(3)', 'sell', 'people', 'film', 'trust', 'download',
 ];
